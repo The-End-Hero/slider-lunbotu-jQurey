@@ -8,13 +8,13 @@
         contructor:VTEC,
         //_init初始化
         _init: function (option) {
-            this.containerID=option.id
-            this.showTime=option.showTime
-            this.isAuto=option.isAuto
-            this.data=option.data
-            this.length=this.data.length
-            this.step=option.step
-            this.timerId=0
+            this.containerID=option.id       //轮播图父盒子的id
+            this.showTime=option.showTime    //轮播动画时间
+            this.isAuto=option.isAuto        //是否自动轮播
+            this.data=option.data            //传入数据
+            this.length=this.data.length     //数据长度
+            this.step=option.step            //切换时长
+            this.timerId=0                   //初始化timerId
 
             //初始化DOM元素
             var $container=$('#'+this.containerID)
@@ -132,10 +132,10 @@
             resultsList.push('</div>')
             resultsList.push('</div>')
 
-            return resultsList.join("")
+            return resultsList.join("")//结构转化为整个字符串
         },
         autoPlay: function () {
-            var self=this
+            var self=this //绑定this
             var autoPlay= function () {
                 self.index+=1
                 self.setIndex(self.index,self.length)
@@ -144,7 +144,7 @@
             self.timerId=setInterval(autoPlay,self.step)
         }
     }
-
+    //对外暴露vtec函数
     $.fn.vtec= function (option) {
         //设置默认参数
         var defaults={
@@ -155,7 +155,7 @@
             isAuto:false
         }
 
-        //初始化参数
+        //初始化参数  将defaults和option合并返回给settings
         var settings= $.extend({},defaults,option)
 
         //调用轮播图模块

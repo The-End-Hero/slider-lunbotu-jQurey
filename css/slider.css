@@ -122,28 +122,14 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #focus1 {
-    width: 500px;
+    width: 730px;
     margin: 100px auto;
     position: relative;
 }
 
 #focus1 .slider {
-    /*height: 454px;*/
-    width: 100%;
+    height: 454px;
 }
 
 #focus1 .slider-main {
@@ -155,7 +141,7 @@ a {
     position: absolute;
     z-index: 1;
     width: 100%;
-    /*height: 466px;*/
+    height: 466px;
     overflow: hidden;
 }
 
@@ -163,19 +149,16 @@ a {
     display: block;
     overflow: hidden;
     zoom: 1;
-    /*height: 454px;*/
+    height: 454px;
 }
-#focus1 .slider-panel a img{
-    width: 100%;
-}
+
 #focus1 .slider-extra {
-    width: 100%;
-    position: absolute;
-    bottom: -50%;
+    position: relative;
+    height: 454px;
 }
 
 #focus1 .slider-nav {
-    bottom: 20px;
+    top: 428px;
     width: 730px;
     height: 0;
     left: 0;
@@ -229,3 +212,15 @@ a {
     font-weight: 400;
     font-family: simsun;
 }
+
+
+
+
+
+
+
+
+
+
+
+
